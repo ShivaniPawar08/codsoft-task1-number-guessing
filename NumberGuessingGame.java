@@ -18,7 +18,7 @@ public class NumberGuessingGame {
 
         while (playAgain) {
 
-            // -------- Difficulty Selection --------
+            
             int maxNumber = 100;
             int maxAttempts = 7;
 
@@ -60,7 +60,7 @@ public class NumberGuessingGame {
             System.out.println("\nI have chosen a number between 1 and " + maxNumber);
             System.out.println("You have " + maxAttempts + " attempts.");
 
-            // -------- Guess Loop --------
+            
             while (!guessedCorrectly && attemptsUsed < maxAttempts) {
 
                 System.out.print("\nEnter your guess: ");
@@ -103,7 +103,6 @@ public class NumberGuessingGame {
                     System.out.println("⬇ Too low!");
                 }
 
-                // -------- Hint System --------
                 if (!guessedCorrectly && attemptsUsed == 2) {
                     if (numberToGuess % 2 == 0)
                         System.out.println("💡 Hint: The number is EVEN.");
@@ -125,10 +124,10 @@ public class NumberGuessingGame {
                 System.out.println("The correct number was: " + numberToGuess);
             }
 
-            // -------- High Score Display --------
+    
             System.out.println("\n🏆 Current High Score: " + highScore);
 
-            // -------- Play Again --------
+        
             System.out.print("\nDo you want to play another round? (yes/no): ");
             String again = sc.next();
 

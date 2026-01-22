@@ -14,7 +14,7 @@ public class NumberGuessingGame {
 
         boolean playAgain = true;
 
-        System.out.println("🎯 Welcome to the Advanced Number Guessing Game!");
+        System.out.println(" Welcome to the Advanced Number Guessing Game!");
 
         while (playAgain) {
 
@@ -66,7 +66,7 @@ public class NumberGuessingGame {
                 System.out.print("\nEnter your guess: ");
 
                 if (!sc.hasNextInt()) {
-                    System.out.println("❌ Enter a valid number!");
+                    System.out.println(" Enter a valid number!");
                     sc.next();
                     continue;
                 }
@@ -74,7 +74,7 @@ public class NumberGuessingGame {
                 int guess = sc.nextInt();
 
                 if (guess < 1 || guess > maxNumber) {
-                    System.out.println("❌ Guess must be between 1 and " + maxNumber);
+                    System.out.println("Guess must be between 1 and " + maxNumber);
                     continue;
                 }
 
@@ -82,13 +82,13 @@ public class NumberGuessingGame {
 
                 if (guess == numberToGuess) {
 
-                    System.out.println("🎉 Correct! You guessed it in " + attemptsUsed + " attempts.");
+                    System.out.println(" Correct! You guessed it in " + attemptsUsed + " attempts.");
 
                     int roundScore = (maxAttempts - attemptsUsed + 1) * 10;
                     totalScore += roundScore;
 
-                    System.out.println("⭐ Round Score: " + roundScore);
-                    System.out.println("💯 Total Score: " + totalScore);
+                    System.out.println(" Round Score: " + roundScore);
+                    System.out.println(" Total Score: " + totalScore);
 
                     if (roundScore > highScore) {
                         highScore = roundScore;
@@ -105,27 +105,27 @@ public class NumberGuessingGame {
 
                 if (!guessedCorrectly && attemptsUsed == 2) {
                     if (numberToGuess % 2 == 0)
-                        System.out.println("💡 Hint: The number is EVEN.");
+                        System.out.println(" Hint: The number is EVEN.");
                     else
-                        System.out.println("💡 Hint: The number is ODD.");
+                        System.out.println(" Hint: The number is ODD.");
                 }
 
                 if (!guessedCorrectly && attemptsUsed == 4) {
                     int low = Math.max(1, numberToGuess - 10);
                     int high = Math.min(maxNumber, numberToGuess + 10);
-                    System.out.println("💡 Hint: The number is between " + low + " and " + high);
+                    System.out.println(" Hint: The number is between " + low + " and " + high);
                 }
 
                 System.out.println("Attempts left: " + (maxAttempts - attemptsUsed));
             }
 
             if (!guessedCorrectly) {
-                System.out.println("\n❌ Out of attempts!");
+                System.out.println("\n Out of attempts!");
                 System.out.println("The correct number was: " + numberToGuess);
             }
 
     
-            System.out.println("\n🏆 Current High Score: " + highScore);
+            System.out.println("\n Current High Score: " + highScore);
 
         
             System.out.print("\nDo you want to play another round? (yes/no): ");
@@ -136,7 +136,7 @@ public class NumberGuessingGame {
             }
         }
 
-        System.out.println("\n🎮 Game Over!");
+        System.out.println("\n Game Over!");
         System.out.println("Final Score: " + totalScore);
         System.out.println("Highest Single-Round Score: " + highScore);
 

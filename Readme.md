@@ -5,7 +5,7 @@ This project was developed as Task 1 during my internship at CodSoft from 10 Jan
 The goal of this task was to build a simple console-based Java application where the computer randomly selects a number and the user attempts to guess it. The program provides feedback after each guess, helping the player reach the correct answer.
 
 
-Nmae:Shivani Kishor Pawar
+Name:Shivani Kishor Pawar
 Intern ID:BY25RY258193
 Internship Duration: 10 January 2026– 10 February 2026
 
